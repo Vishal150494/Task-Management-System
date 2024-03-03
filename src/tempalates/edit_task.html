@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Task{% endblock %}
+
+{% block content %}
+<h2>Edit Task</h2>
+<form method="POST">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" name="title" value="{{ task.title }}" required>
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" name="description">{{ task.description }}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="due_date">Due Date</label>
+        <input type="date" class="form-control" id="due_date" name="due_date" value="{{ task.due_date|date('Y-m-d') }}" required>
+    </div>
+    <div class="form-group">
+        <label for="priority">Priority</label>
+        <select class="form-control" id="priority" name="priority">
+            <option {{ 'Low' if task.priority == 'Low' else '' }}>Low</option>
+            <option {{ 'Medium' if task.priority == 'Medium' else '' }}>Medium</option>
+            <option {{ 'High' if task.priority == 'High' else '' }}>High</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Task</button>
+</form>
+{% endblock %}

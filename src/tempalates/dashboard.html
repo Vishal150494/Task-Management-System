@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2>Dashboard</h2>
+<a href="{{ url_for('tasks.add_new_task') }}" class="btn btn-success mb-3">Add New Task</a>
+<ul class="list-group">
+    {% for task in tasks %}
+    <li class="list-group-item">
+        {{ task.title }} - {{ task.due_date }} - {{ task.priority }}
+        <div class="float-right">
+            <a href="{{ url_for('tasks.edit_task', task_id=task.id) }}" class="btn btn-sm btn-info">Edit</a>
+            <a href="{{ url_for('tasks.delete_task', task_id=task.id) }}" class="btn btn-sm btn-danger">Delete</a>
+        </div>
+    </li>
+    {% else %}
+    <li class="list-group-item">No tasks found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
