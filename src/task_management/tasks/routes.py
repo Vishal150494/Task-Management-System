@@ -3,6 +3,7 @@
 This module handles task management routes for the task management application.
 It supports adding, viewing, editing, deleting .... tasks.
 """
+from datetime import datetime
 from flask import Blueprint, request, jsonify, flash, redirect, render_template, url_for
 from flask_login import login_required, logout_user, current_user
 from .models import Task
@@ -22,16 +23,28 @@ def dashboard():
 def add_new_task():
     """This method handles adding / creating new tasks"""
     if request.method == 'POST':
+        print(request.form)
         title = request.form['title']
         description = request.form['description']
-        due_date = request.form['due_date']
+        due_date_str = request.form['due_date']
+        due_date = datetime.strptime(due_date_str, '%Y-%m-%d')
         priority = request.form['priority'] 
-        assignee = request.form['assignee']
+        assignee = current_user.id
         
-        new_task = Task(title=title, description=description, due_date=due_date, priority=priority, assignee=assignee)
-        db.session.add(new_task)
-        db.session.commit()
-        return jsonify({"message":"New task added successfully."}), 201
+        if not title or not due_date or not assignee:
+            flash("Error adding the task", "FAILED!")
+            return redirect(url_for('tasks.dashboard')), 400
+        
+        try:
+            new_task = Task(title=title, description=description, due_date=due_date, priority=priority, assignee=assignee)
+            db.session.add(new_task)
+            db.session.commit()
+            #flash("New task added successfully.", "SUCCESS")
+            #return redirect(url_for('tasks.dashboard')), 201
+            return render_template('add_task.html')
+        except Exception as e:
+            flash(f"Error adding new task: {str(e)}", "FAILED!")
+            return redirect(url_for('tasks.dashboard')), 500
     return render_template('add_task.html')
 
 @task_bp.route('/edit_task/<int:task_id>', methods=['GET','POST'])
@@ -41,23 +54,27 @@ def edit_task(task_id):
     task = Task.query.get_or_404(task_id, "Task not found in the database")
     
     if task.assignee != current_user.id:
-        #return jsonify({"mesage":"User not authorized"}), 401
         flash("User not authorized to edit this task", "FAILED!")
-        return redirect(url_for('dashboard'))
+        return redirect(url_for('tasks.dashboard')), 403
     
     if request.method == 'POST':
         task.title = request.form['title']
         task.description = request.form['description']
-        task.due_date = request.form['due_date']
+        due_date_str = request.form['due_date']
+        task.due_date = datetime.strptime(due_date_str, '%Y-%m-%d')
         task.priority = request.form['priority']
         task.assignee = request.form['assignee']
         
-        db.session.commit()
-        flash("Task updated successfully!", "SUCCESS")
-        return redirect(url_for('dashboard'))
+        try:
+            db.session.commit()
+            flash("Task updated successfully!", "SUCCESS")
+            return redirect(url_for('tasks.dashboard')), 201
+        except Exception as e:
+            flash(f"Error editing the task: {str(e)}", "FAILED!")
+            return redirect(url_for('tasks.dashboard')), 500       
     return render_template('edit_task.html', task=task)
         
-@task_bp.route('/delete_task/<int:task_id>', methods=['POST'])
+@task_bp.route('/delete_task/<int:task_id>', methods=['POST', 'DELETE'])
 @login_required
 def delete_task(task_id):
     """This method deletes task from the dashboard"""
@@ -65,10 +82,13 @@ def delete_task(task_id):
     
     if task.assignee != current_user.id:
         flash("User not authorized to delete this task", "FAILED!")
-        return redirect(url_for('dashboard'))
+        return redirect(url_for('tasks.dashboard')), 403
     
-    db.session.delete(task)
-    db.session.commit()
-    return jsonify({"message":"Task deleted successfully from the dashboard"}), 201
-
-        
+    try:
+        db.session.delete(task)
+        db.session.commit()
+        flash("Task deleted successfully from the dashboard", "SUCCESS")
+        return redirect(url_for('tasks.dashboard')), 201
+    except Exception as e:
+        flash(f"Error deleting the task: {str(e)}", "FAILED!")
+        return redirect(url_for('tasks.dashboard')), 500

@@ -25,5 +25,13 @@ class Task(db.Model):
         """
         Standard python Method to return a string representation of the task object that includes the title of the task.
         """
-        return f"<Task {self.title}>"
+        return {
+            "Task": {self.title},
+            "Description": {self.description},
+            "Due Date": {self.due_date},
+            "Priority": {self.priority},
+            "Status": {self.status},
+            "Assignee": {self.assignee},
+            "Created On": {self.created_on}
+            }
     

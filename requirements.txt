@@ -2,6 +2,7 @@ Flask==2.3.2
 Flask-SQLAlchemy
 Flask-Migrate
 Flask-Login
+Flask-WTF
 Werkzeug
 Jinja2
 MarkupSafe

@@ -24,7 +24,7 @@ class User(UserMixin, db.Model):
         """
         Standard python Method to return a string representation of the user object that includes the username. 
         """
-        return f"<User {self.username}>"
+        return f"<User {self.username}:{self.email_id}>"
     
     def create_password(self, password):
         """

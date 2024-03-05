@@ -29,6 +29,11 @@ def register():
         db.session.commit()
         return jsonify({"message":"User registered successfully."}), 201
     return render_template('register.html')
+
+@auth_bp.route('/dashboard')
+def dashboard():
+    """This method simply renders the dashboard view"""
+    return render_template('dashboard.html')
     
 @auth_bp.route('/login', methods=['GET','POST'])
 def login():
@@ -41,7 +46,7 @@ def login():
             """Generating a token for the session"""
             token = "user-token"
             login_user(user)
-            return redirect(url_for('dashboard'))
+            return redirect(url_for('auth.dashboard'))
         else:
             return jsonify({"message":"Invalid user credentials. Please try again"}), 401
     return render_template('login.html')
