@@ -32,7 +32,13 @@ Before you get started with this project / repository, make sure you have the fo
 git clone https://github.com/VishalAshok1504/Task-Management-System.git
 cd Task-Management-System
 ```
-2. Build and run the web application using docker
+2. Under the root folder, replace the place holders with desired inputs under **'.env'** file.
+3. Run:
+```
+flask db migrate -m"<Initial Migration message>"
+flask db upgrade
+```
+4. Build and run the web application using docker
 ```
 docker-compose up --build
 ```
