@@ -5,7 +5,7 @@ like due date, priority, assignees and so on.
 """
 from ..db import db
 from datetime import datetime
-
+from ..auth.models import User
 class Task(db.Model):
     """
     Task model for storing information related to the tasks

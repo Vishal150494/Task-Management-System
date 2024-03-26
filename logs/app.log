@@ -1,0 +1,811 @@
+Exception on /auth/login [GET]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/auth/routes.py", line 52, in login
+    return render_template('login.html')
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/login.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/base.html", line 53, in template
+    {% block content %}{% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endif'. The innermost block that needs to be closed is 'if'.
+Exception on /auth/login [GET]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/auth/routes.py", line 52, in login
+    return render_template('login.html')
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/login.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/base.html", line 40, in top-level template code
+    <a class="nav-link" href="{{ url_for('auth.logot') }}">Logout</a>
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.logot'. Did you mean 'auth.logout' instead?
+Exception on /tasks/dashboard [GET]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/tasks/routes.py", line 19, in dashboard
+    return render_template('dashboard.html', tasks=tasks)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/dashboard.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/base.html", line 56, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/dashboard.html", line 13, in block 'content'
+    <a href="{{ url_for('tasks.edit_task', task_id=task.id) }}" class="btn btn-sm btn-info">Edit</a>
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/werkzeug/routing/map.py", line 796, in _partial_build
+    rv = self._partial_build(
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/werkzeug/routing/map.py", line 809, in _partial_build
+    build_rv = rule.build(values, append_unknown)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/werkzeug/routing/rules.py", line 831, in build
+    return self._build_unknown(**values)
+  File "<werkzeug routing>", line 1, in <builder:'/tasks/edit_task/<int:task_id>'>
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/werkzeug/routing/converters.py", line 163, in to_url
+    value = str(self.num_convert(value))
+jinja2.exceptions.UndefinedError: 'src.task_management.tasks.models.Task object' has no attribute 'id'
+Exception on /tasks/dashboard [GET]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/tasks/routes.py", line 19, in dashboard
+    return render_template('dashboard.html', tasks=tasks)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/dashboard.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/base.html", line 56, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/dashboard.html", line 13, in block 'content'
+    <a href="{{ url_for('tasks.edit_task', task_id=task.id) }}" class="btn btn-sm btn-info">Edit</a>
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/werkzeug/routing/map.py", line 796, in _partial_build
+    rv = self._partial_build(
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/werkzeug/routing/map.py", line 809, in _partial_build
+    build_rv = rule.build(values, append_unknown)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/werkzeug/routing/rules.py", line 831, in build
+    return self._build_unknown(**values)
+  File "<werkzeug routing>", line 1, in <builder:'/tasks/edit_task/<int:task_id>'>
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/werkzeug/routing/converters.py", line 163, in to_url
+    value = str(self.num_convert(value))
+jinja2.exceptions.UndefinedError: 'src.task_management.tasks.models.Task object' has no attribute 'id'
+Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: users
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/auth/routes.py", line 22, in register
+    if User.query.filter_by(username=username).first():
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2727, in first
+    return self.limit(1)._iter().first()  # type: ignore
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2826, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2306, in execute
+    return self._execute_internal(
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1408, in execute
+    return meth(
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.email_id AS users_email_id, users.password AS users_password, users.created_on AS users_created_on 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('VishalAshok', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Exception on /tasks/edit_task/1 [GET]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/tasks/routes.py", line 85, in edit_task
+    return render_template('edit_task.html', task=task)
+UnboundLocalError: local variable 'task' referenced before assignment
+Exception on /tasks/edit_task/1 [GET]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/tasks/routes.py", line 86, in edit_task
+    return render_template('edit_task.html', task=task)
+UnboundLocalError: local variable 'task' referenced before assignment
+Exception on /tasks/edit_task/1 [GET]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/tasks/routes.py", line 86, in edit_task
+UnboundLocalError: local variable 'task' referenced before assignment
+Exception on /tasks/edit_task/1 [GET]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/tasks/routes.py", line 86, in edit_task
+UnboundLocalError: local variable 'task' referenced before assignment
+Exception on /tasks/edit_task/1 [GET]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/tasks/routes.py", line 86, in edit_task
+UnboundLocalError: local variable 'task' referenced before assignment
+Exception on /tasks/edit_task/1 [GET]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/tasks/routes.py", line 85, in edit_task
+    return render_template('edit_task.html')
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/edit_task.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/base.html", line 56, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/edit_task.html", line 11, in block 'content'
+    <input type="text" class="form-control" id="title" name="title" value="{{ task.title }}" required>
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'task' is undefined
+Exception on /tasks/edit_task/1 [GET]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/tasks/routes.py", line 80, in edit_task
+    return render_template('edit_task.html')
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/edit_task.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/base.html", line 56, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/edit_task.html", line 11, in block 'content'
+    <input type="text" class="form-control" id="title" name="title" value="{{ task.title }}" required>
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'task' is undefined
+Exception on /tasks/edit_task/1 [GET]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/tasks/routes.py", line 80, in edit_task
+    return render_template('edit_task.html')
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/edit_task.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/base.html", line 56, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/templates/edit_task.html", line 11, in block 'content'
+    <input type="text" class="form-control" id="title" name="title" value="{{ task.title }}" required>
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'task' is undefined
+Exception on /tasks/delete_task/2 [POST]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1801, in make_response
+    raise TypeError(
+TypeError: The view function for 'tasks.delete_task' did not return a valid response. The function either returned None or ended without a return statement.
+Exception on /tasks/delete_task/1 [POST]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/vishal/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/vishal/Desktop/Coursera/Task-Management-System/src/task_management/tasks/routes.py", line 105, in delete_task
+    flash(message, "success" if request.method == 'POST' else "error")
+UnboundLocalError: local variable 'message' referenced before assignment
+Exception on /tasks/delete_task/1 [POST]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1801, in make_response
+    raise TypeError(
+TypeError: The view function for 'tasks.delete_task' did not return a valid response. The function either returned None or ended without a return statement.
+Exception on /tasks/delete_task/1 [POST]
+Traceback (most recent call last):
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/home/vishal/miniconda3/envs/dev-project/lib/python3.10/site-packages/flask/app.py", line 1801, in make_response
+    raise TypeError(
+TypeError: The view function for 'tasks.delete_task' did not return a valid response. The function either returned None or ended without a return statement.
+Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3282, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "db" (172.18.0.2), port 5432 failed: FATAL:  password authentication failed for user "None"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/src/task_management/auth/routes.py", line 26, in register
+    existing_user = User.query.filter((User.username == username) | (User.email_id == email)).first()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2727, in first
+    return self.limit(1)._iter().first()  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2826, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2306, in execute
+    return self._execute_internal(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2181, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2050, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1144, in _connection_for_bind
+    conn = bind.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3258, in connect
+    return self._connection_cls(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2422, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3282, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "db" (172.18.0.2), port 5432 failed: FATAL:  password authentication failed for user "None"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3282, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "db" (172.19.0.2), port 5432 failed: FATAL:  password authentication failed for user "None"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/src/task_management/auth/routes.py", line 26, in register
+    existing_user = User.query.filter((User.username == username) | (User.email_id == email)).first()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2727, in first
+    return self.limit(1)._iter().first()  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2826, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2306, in execute
+    return self._execute_internal(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2181, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2050, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1144, in _connection_for_bind
+    conn = bind.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3258, in connect
+    return self._connection_cls(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2422, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3282, in raw_connection
+    return self.pool.connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 168, in _do_get
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.10/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "db" (172.19.0.2), port 5432 failed: FATAL:  password authentication failed for user "None"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: users
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/src/task_management/auth/routes.py", line 26, in register
+    existing_user = User.query.filter((User.username == username) | (User.email_id == email)).first()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2727, in first
+    return self.limit(1)._iter().first()  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2826, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2306, in execute
+    return self._execute_internal(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1408, in execute
+    return meth(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.email_id AS users_email_id, users.password AS users_password, users.created_on AS users_created_on 
+FROM users 
+WHERE users.username = ? OR users.email_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('test', 'testuser@example.com', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: users
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/src/task_management/auth/routes.py", line 26, in register
+    existing_user = User.query.filter((User.username == username) | (User.email_id == email)).first()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2727, in first
+    return self.limit(1)._iter().first()  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2826, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2306, in execute
+    return self._execute_internal(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1408, in execute
+    return meth(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.email_id AS users_email_id, users.password AS users_password, users.created_on AS users_created_on 
+FROM users 
+WHERE users.username = ? OR users.email_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('test', 'testuser@example.com', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: users
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/src/task_management/auth/routes.py", line 26, in register
+    existing_user = User.query.filter((User.username == username) | (User.email_id == email)).first()
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2727, in first
+    return self.limit(1)._iter().first()  # type: ignore
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2826, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2306, in execute
+    return self._execute_internal(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1408, in execute
+    return meth(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.email_id AS users_email_id, users.password AS users_password, users.created_on AS users_created_on 
+FROM users 
+WHERE users.username = ? OR users.email_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('test', 'testuser@example.com', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

@@ -1,0 +1,258 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Task Management API",
+    "description": "This is a simple and easy-to-use Task Management server based on OpenAPI 3.0 specification, \nwhere the user can register himself/herself, login, add, edit & delete task & logout of the session.",
+    "termsOfService": "http://taskmanagement.com/terms/",
+    "contact": {
+      "email": "vishalashok_hegde@outlook.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.11"
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Authorization",
+      "description": "Operations for user authentication",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "http://taskmanagement.com/auth"
+      }
+    },
+    {
+      "name": "Tasks",
+      "description": "Access to Task Management Operations"
+    }
+  ],
+  "paths": {
+    "/auth/register": {
+      "post": {
+        "tags": ["Authorization"],
+        "summary": "Registering a new user",
+        "operationId": "registerUser",
+        "requestBody": {
+          "description": "User Registration",
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "User registered successfully"
+          },
+          "400": {
+            "description": "Invalid input or user already registered"
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "tags": ["Authorization"],
+        "summary": "Login a valid user",
+        "operationId": "loginUser",
+        "requestBody": {
+          "description": "User Login",
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "User logged in successfully"
+          },
+          "401": {
+            "description": "Invalid user credentials. Please try again"
+          }
+        }
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "tags": ["Authorization"],
+        "summary": "Logout the current user",
+        "operationId": "logoutUser",
+        "requestBody": {
+          "description": "User Logout",
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/Logout"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "User logged out successfully"
+          }
+        }
+      }
+    },
+    "/tasks/add_task": {
+      "post": {
+        "tags": ["Tasks"],
+        "summary": "Add a new task",
+        "operationId": "addTask",
+        "requestBody": {
+          "description": "Create a new task",
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/Task"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Task added successfully"
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/tasks/edit_task/{taskId}": {
+      "post": {
+        "tags": ["Tasks"],
+        "summary": "Edit an existing task",
+        "operationId": "editTask",
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Edit an existing task",
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/Task"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Task updated successfully"
+          },
+          "400": {
+            "description": "Error editing task"
+          }
+        }
+      }
+    },
+    "/tasks/delete_task/{taskId}": {
+      "post": {
+        "tags": ["Tasks"],
+        "summary": "Delete an existing task",
+        "operationId": "deleteTask",
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "description": "Unique Task Id to delete",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Task deleted successfully"
+          },
+          "400": {
+            "description": "Error deleting task"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "User": {
+        "type": "object",
+        "required": ["username", "password", "email_id"],
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "email_id": {
+            "type": "string",
+            "format": "email"
+          }
+        }
+      },
+      "Login": {
+        "type": "object",
+        "required": ["username", "password"],
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "Task": {
+        "type": "object",
+        "required": ["title", "description", "dueDate", "priority"],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["Low", "Medium", "High"]
+          }
+        }
+      }
+    }
+  }
+}
+
+  

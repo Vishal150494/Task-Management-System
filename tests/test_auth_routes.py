@@ -26,7 +26,7 @@ class TestAuthIntegration(unittest.TestCase):
             email_id='test_id@testing.com',
             password='testing_password'
         ), follow_redirects=True)
-        self.assertEqual(response.status_code, 201)
+        self.assertEqual(response.status_code, 200)
         
         #Simulating user login
         response = self.client.post('/auth/login', data=dict(

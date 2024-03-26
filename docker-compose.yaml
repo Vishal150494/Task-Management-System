@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    environment:
+      FLASK_ENV: dev
+      FLASK_APP: src/main.py
+      DATABSE_URI: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db/${POSTGRES_DB}
+    volumes:
+      - .:/app
+      - ./logs:/app/logs
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    command: flask run --host=0.0.0.0 --port=5000
+
+  db:
+    image: postgres:16
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+volumes:
+  postgres_data:

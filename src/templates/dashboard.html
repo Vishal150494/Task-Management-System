@@ -8,10 +8,12 @@
 <ul class="list-group">
     {% for task in tasks %}
     <li class="list-group-item">
-        {{ task.title }} - {{ task.due_date }} - {{ task.priority }}
+        {{ task.title }} - {{ task.due_date.strftime('%Y-%m-%d') }} - {{ task.priority }}
         <div class="float-right">
             <a href="{{ url_for('tasks.edit_task', task_id=task.id) }}" class="btn btn-sm btn-info">Edit</a>
-            <a href="{{ url_for('tasks.delete_task', task_id=task.id) }}" class="btn btn-sm btn-danger">Delete</a>
+            <form action="{{ url_for('tasks.delete_task', task_id=task.id) }}" method="post" class="d-inline">
+                <input type="submit" class="btn btn-sm btn-danger" value="DELETE">
+            </form>
         </div>
     </li>
     {% else %}
